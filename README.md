@@ -39,31 +39,44 @@ A full-stack e-commerce application built with React, Redux Toolkit, and JSON Se
 │   ├── package.json         # Backend dependencies
 │   └── .gitignore          # Git ignore file
 ├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   └── Nav.jsx      # Navigation component
-│   │   ├── pages/
-│   │   │   ├── Cart.jsx     # Shopping cart page
-│   │   │   ├── Login.jsx    # Login page
-│   │   │   ├── Register.jsx # Registration page
-│   │   │   ├── Products.jsx # Product listing page
-│   │   │   ├── admin/
-│   │   │   │   ├── CreateProduct.jsx
-│   │   │   │   └── ProductDetail.jsx
-│   │   │   └── user/
-│   │   │       └── UserProfile.jsx
-│   │   ├── routes/
-│   │   │   ├── Mainroutes.jsx
-│   │   │   └── Authwrapper.jsx
-│   │   ├── store/
-│   │   │   ├── Store.jsx
-│   │   │   ├── actions/
-│   │   │   └── reducers/
-│   │   ├── api/
-│   │   │   └── axiosconfig.jsx
-│   │   └── App.jsx
-│   ├── package.json
-│   └── index.html
+|   ├── public/
+|   ├── src/
+|   │   ├── api/
+|   │   │   └── axiosconfig.jsx              # Axios configuration for API calls
+|   │   ├── components/
+|   │   │   └── Nav.jsx                      # Navigation component
+|   │   ├── pages/
+|   │   │   ├── admin/
+|   │   │   │   ├── CreateProduct.jsx        # Admin - Create new products
+|   │   │   │   └── ProductDetail.jsx        # Product details & admin edit/delete
+|   │   │   ├── user/
+|   │   │   │   └── UserProfile.jsx          # User profile management
+|   │   │   ├── Cart.jsx                     # Shopping cart functionality
+|   │   │   ├── Login.jsx                    # User login
+|   │   │   ├── PageNotFound.jsx             # 404 error page
+|   │   │   ├── Products.jsx                 # Product listing with infinite scroll
+|   │   │   └── Register.jsx                 # User registration
+|   │   ├── routes/
+|   │   │   ├── Authwrapper.jsx              # Authentication wrapper component
+|   │   │   └── Mainroutes.jsx               # Main routing configuration
+|   │   ├── store/
+|   │   │   ├── actions/
+|   │   │   │   ├── cartActions.jsx          # Cart-related actions (empty)
+|   │   │   │   ├── productActions.jsx       # Product CRUD operations
+|   │   │   │   └── userActions.jsx          # User authentication & management
+|   │   │   ├── reducers/
+|   │   │   │   ├── cartSlice.jsx            # Cart state management
+|   │   │   │   ├── productSlice.jsx         # Product state management
+|   │   │   │   └── userSlice.jsx            # User state management
+|   │   │   └── Store.jsx                    # Redux store configuration
+|   │   ├── App.jsx                          # Main application component
+|   │   ├── index.css                        # Global styles (Tailwind import)
+|   │   └── main.jsx                         # Application entry point
+|   ├── .gitignore                           # Git ignore rules
+|   ├── eslint.config.js                     # ESLint configuration
+|   ├── index.html                           # HTML template
+|   ├── package.json                         # Dependencies & scripts
+|   └── vite.config.js                       # Vite configuration
 ```
 
 ## Installation
