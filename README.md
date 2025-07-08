@@ -60,7 +60,6 @@ A full-stack e-commerce application built with React, Redux Toolkit, and JSON Se
 |   │   │   └── Mainroutes.jsx               # Main routing configuration
 |   │   ├── store/
 |   │   │   ├── actions/
-|   │   │   │   ├── cartActions.jsx          # Cart-related actions (empty)
 |   │   │   │   ├── productActions.jsx       # Product CRUD operations
 |   │   │   │   └── userActions.jsx          # User authentication & management
 |   │   │   ├── reducers/
