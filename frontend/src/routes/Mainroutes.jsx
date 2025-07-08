@@ -9,6 +9,7 @@ const ProductDetails = lazy(() => import("../pages/admin/ProductDetail.jsx"));
 const UserProfile = lazy(() => import("../pages/user/UserProfile.jsx"));
 const PageNotfound = lazy(() => import("../pages/PageNotFound.jsx"));
 const Authwrapper = lazy(() => import("./Authwrapper.jsx"));
+const Unauthwrapper = lazy(() => import("./Unauthwrapper.jsx"));
 const Cart = lazy(() => import("../pages/Cart.jsx"));
 
 const Mainroutes = () => {
@@ -16,8 +17,22 @@ const Mainroutes = () => {
     <Routes>
       <Route path="/" element={<Products />} />
 
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
+      <Route
+        path="/login"
+        element={
+          <Unauthwrapper>
+            <Login />
+          </Unauthwrapper>
+        }
+      />
+      <Route
+        path="/register"
+        element={
+          <Unauthwrapper>
+            <Register />
+          </Unauthwrapper>
+        }
+      />
 
       <Route
         path="/admin/create-product"
