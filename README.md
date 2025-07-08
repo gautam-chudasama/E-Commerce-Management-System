@@ -57,7 +57,8 @@ A full-stack e-commerce application built with React, Redux Toolkit, and JSON Se
 |   │   │   └── Register.jsx                 # User registration
 |   │   ├── routes/
 |   │   │   ├── Authwrapper.jsx              # Authentication wrapper component
-|   │   │   └── Mainroutes.jsx               # Main routing configuration
+|   │   │   ├── Mainroutes.jsx               # Main routing configuration
+|   │   │   └── Unauthwrapper.jsx            
 |   │   ├── store/
 |   │   │   ├── actions/
 |   │   │   │   ├── productActions.jsx       # Product CRUD operations
