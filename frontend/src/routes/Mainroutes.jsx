@@ -1,15 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy } from "react";
-// import Products from "../pages/Products.jsx";
-// import Login from "../pages/Login.jsx";
-// import Register from "../pages/Register.jsx";
-// import CreateProduct from "../pages/admin/CreateProduct.jsx";
-// import ProductDetails from "../pages/admin/ProductDetail.jsx";
-// import UserProfile from "../pages/user/UserProfile.jsx";
-// import PageNotfound from "../pages/PageNotFound.jsx";
-// import Authwrapper from "./Authwrapper.jsx";
 
-// Lazy loading
 const Products = lazy(() => import("../pages/Products.jsx"));
 const Login = lazy(() => import("../pages/Login.jsx"));
 const Register = lazy(() => import("../pages/Register.jsx"));

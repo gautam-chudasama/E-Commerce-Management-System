@@ -9,7 +9,6 @@ import {
 } from "../../store/actions/userActions";
 
 const UserProfile = () => {
-  const { id } = useParams();
 
   const { users } = useSelector((state) => state.userReducer);
 

@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { nanoid } from "nanoid";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { asynccreateproduct } from "../../store/actions/productActions";
 

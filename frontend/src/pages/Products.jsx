@@ -9,7 +9,6 @@ const Products = () => {
   const dispatch = useDispatch();
 
   const users = useSelector((state) => state.userReducer.users);
-  // const products = useSelector((state) => state.productReducer.products);
 
   const [products, setproducts] = useState([]);
   const [hasMore, sethasMore] = useState(true);
@@ -19,7 +18,6 @@ const Products = () => {
       const { data } = await axios.get(
         `/products?_limit=6&_start=${products.length}`
       );
-      // console.log(data);
       if (data.length == 0) {
         sethasMore(false);
       } else {

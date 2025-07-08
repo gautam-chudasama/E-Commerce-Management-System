@@ -13,10 +13,7 @@ const ProductDetails = () => {
   
   const users = useSelector((state) => state.userReducer.users);
   const products = useSelector((state) => state.productReducer.products);
-  // const {
-  //   productReducer: { products },
-  //   userReducer: { users },
-  // } = useSelector((state) => state);
+
   const product = products?.find((product) => product.id === id);
 
   const dispatch = useDispatch();

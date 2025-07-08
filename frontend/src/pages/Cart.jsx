@@ -5,7 +5,6 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   const users = useSelector((state) => state.userReducer.users);
-  const products = useSelector((state) => state.productReducer.products);
 
   const increasequantityhandler = (index, product) => {
     const copyuser = { ...users, cart: [...users.cart] };
