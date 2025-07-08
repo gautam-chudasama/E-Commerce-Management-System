@@ -14,7 +14,6 @@ A full-stack e-commerce application built with React, Redux Toolkit, and JSON Se
 ### Admin Features
 - **Product Management**: Create, update, and delete products
 - **Admin Dashboard**: Administrative controls for product management
-- **User Management**: Admin can manage system users
 
 ## Tech Stack
 
@@ -168,7 +167,6 @@ Password: 00
 - Category-based organization
 
 ### Responsive Design
-- Mobile-friendly interface
 - Tailwind CSS for styling
 - Modern UI components
 
