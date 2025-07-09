@@ -37,7 +37,7 @@ const CreateProduct = () => {
       />
 
       <textarea
-        {...register("decription")}
+        {...register("description")}
         className="mb-3 outline-0 p-2 border-b text-2xl"
         placeholder="Description"
       ></textarea>
