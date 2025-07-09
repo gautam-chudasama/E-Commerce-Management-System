@@ -3,25 +3,23 @@ import { Link } from "react-router-dom";
 import { asyncupdateuser } from "../store/actions/userActions";
 
 const ProductTemplate = ({ product }) => {
+  const dispatch = useDispatch();
+  const users = useSelector((state) => state.userReducer.users);
 
-      const dispatch = useDispatch();
-      const users = useSelector((state) => state.userReducer.users);
+  const AddtoCartHandler = (product) => {
+    const copyuser = { ...users, cart: [...users.cart] };
+    const x = copyuser.cart.findIndex((c) => c?.product?.id == product.id);
 
-      const AddtoCartHandler = (product) => {
-        const copyuser = { ...users, cart: [...users.cart] };
-        const x = copyuser.cart.findIndex((c) => c?.product?.id == product.id);
-    
-        if (x == -1) {
-          copyuser.cart.push({ product, quantity: 1 });
-        } else {
-          copyuser.cart[x] = {
-            product,
-            quantity: copyuser.cart[x].quantity + 1,
-          };
-        }
-        dispatch(asyncupdateuser(copyuser.id, copyuser));
+    if (x == -1) {
+      copyuser.cart.push({ product, quantity: 1 });
+    } else {
+      copyuser.cart[x] = {
+        product,
+        quantity: copyuser.cart[x].quantity + 1,
       };
-
+    }
+    dispatch(asyncupdateuser(copyuser.id, copyuser));
+  };
 
   return (
     <div

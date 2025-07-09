@@ -12,7 +12,9 @@ const Products = () => {
       next={fetchproducts}
       hasMore={hasMore}
       loader={
-        <h4 className="text-center text-5xl text-yellow-500 min-h-screen">Loading...</h4>
+        <h4 className="text-center text-5xl text-yellow-500 min-h-screen">
+          Loading...
+        </h4>
       }
       endMessage={
         <p style={{ textAlign: "center" }}>

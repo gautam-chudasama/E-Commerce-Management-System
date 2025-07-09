@@ -9,7 +9,6 @@ import {
 } from "../../store/actions/userActions";
 
 const UserProfile = () => {
-
   const { users } = useSelector((state) => state.userReducer);
 
   const dispatch = useDispatch();
@@ -24,7 +23,6 @@ const UserProfile = () => {
   });
 
   const UpdateUserHandler = (user) => {
-
     dispatch(asyncupdateuser(users.id, user));
   };
 

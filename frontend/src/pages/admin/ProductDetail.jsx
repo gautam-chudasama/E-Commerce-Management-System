@@ -10,7 +10,7 @@ import { asyncupdateuser } from "../../store/actions/userActions";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  
+
   const users = useSelector((state) => state.userReducer.users);
   const products = useSelector((state) => state.productReducer.products);
 
@@ -39,19 +39,19 @@ const ProductDetails = () => {
   };
 
   const AddtoCartHandler = (product) => {
-      const copyuser = { ...users, cart: [...users.cart] };
-      const x = copyuser.cart.findIndex((c) => c?.product?.id == product.id);
-  
-      if (x == -1) {
-        copyuser.cart.push({ product, quantity: 1 });
-      } else {
-        copyuser.cart[x] = {
-          product,
-          quantity: copyuser.cart[x].quantity + 1,
-        };
-      }
-      dispatch(asyncupdateuser(copyuser.id, copyuser));
-    };
+    const copyuser = { ...users, cart: [...users.cart] };
+    const x = copyuser.cart.findIndex((c) => c?.product?.id == product.id);
+
+    if (x == -1) {
+      copyuser.cart.push({ product, quantity: 1 });
+    } else {
+      copyuser.cart[x] = {
+        product,
+        quantity: copyuser.cart[x].quantity + 1,
+      };
+    }
+    dispatch(asyncupdateuser(copyuser.id, copyuser));
+  };
 
   return product ? (
     <>

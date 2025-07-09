@@ -10,7 +10,6 @@ const Login = () => {
   const navigate = useNavigate();
 
   const loginHandler = (user) => {
-
     dispatch(asyncloginuser(user));
     navigate("/");
   };
@@ -34,7 +33,9 @@ const Login = () => {
         placeholder="********"
       />
 
-      <button className="mt-5 px-4 py-2 bg-blue-500 rounded-xl">Login User</button>
+      <button className="mt-5 px-4 py-2 bg-blue-500 rounded-xl">
+        Login User
+      </button>
       <p className="mt-3">
         Don't have an account?{" "}
         <Link to="/register" className="text-blue-500">
